@@ -1,0 +1,50 @@
+// Dentro de tu data.forEach(row => { ...
+tr.innerHTML = `
+    <td>${row.nombre}</td>
+    <td>${row.apellidos}</td>
+    <td>${row.region}</td>
+    <td>${row.comuna}</td>
+    <td>${row.profesion}</td>
+    <td>
+        <button type="button" 
+            class="btn-modificar"
+            onclick="llenarFormulario(this)"
+            data-id="${row.id}" 
+            data-nombre="${row.nombre}"
+            data-apellidos="${row.apellidos}"
+            data-region="${row.region}"
+            data-comuna="${row.comuna}"
+            data-profesion="${row.profesion}">
+            Modificar
+        </button>
+    </td>
+`;
+historialTable.appendChild(tr);
+
+
+function llenarFormulario(boton) {
+    // 1. Extraer los datos almacenados en el botón (dataset)
+    // Nota: JS convierte los data-attributes a camelCase (data-nombre -> dataset.nombre)
+    const datos = boton.dataset;
+
+    // 2. Rellenar los campos del formulario usando los IDs de tus inputs
+    // (Asegúrate de tener estos IDs en tu HTML)
+    document.getElementById('txt_id').value = datos.id;
+    document.getElementById('txt_nombre').value = datos.nombre;
+    document.getElementById('txt_apellidos').value = datos.apellidos;
+    document.getElementById('sel_region').value = datos.region; 
+    document.getElementById('txt_profesion').value = datos.profesion;
+
+    // Manejo especial para la comuna (Select dependiente)
+    // Primero seteamos la región, disparamos el cambio si es necesario, y luego la comuna
+    let selectComuna = document.getElementById('sel_comuna');
+    
+    // Si tu select de comunas ya tiene todas las opciones cargadas:
+    selectComuna.value = datos.comuna;
+
+    // Si tu select de comunas se carga dinámicamente al cambiar región, 
+    // podrías necesitar lógica adicional aquí para cargar las comunas antes de seleccionar.
+    
+    // Opcional: Llevar al usuario arriba para ver el formulario lleno
+    document.getElementById('txt_nombre').focus();
+}
