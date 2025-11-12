@@ -1,0 +1,117 @@
+/* REQUISITO GENERAL: 
+    - Tipografía Verdana 
+    - Tamaño letra 16px 
+*/
+body {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* ESTILOS DE TABLAS
+    - Los campos deben estar centrados
+*/
+table {
+    border-collapse: collapse;
+}
+
+.layout-table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-table td {
+    padding: 5px;
+    text-align: left; /* Alineación interna de los inputs */
+}
+
+.data-table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; /* Requisito: Campos centrados */
+}
+
+.data-table th, .data-table td {
+    padding: 8px;
+    text-align: center; /* Requisito: Campos centrados */
+}
+
+.full-width {
+    width: 80%; /* Ajuste para que se vea como la imagen inferior */
+}
+
+/* REQUISITO: INPUTS Y SELECTS
+    - Alto: 30px
+    - Ancho: 180px
+    - Borde redondeado: 10px
+    - Estilo borde: solido
+*/
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Borde sólido */
+    padding-left: 5px;
+    box-sizing: border-box; /* Para mantener las dimensiones exactas */
+}
+
+/* REQUISITO: BOTÓN RESERVAR
+    - Fondo: #58B957
+    - Letras: blancas
+    - Borde redondeado: 15px
+    - Alto: 40px
+    - Ancho: 230px
+    - Sin bordes
+*/
+.btn-reservar {
+    background-color: #58B957;
+    color: white;
+    border-radius: 15px;
+    height: 40px;
+    width: 230px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* REQUISITO: BOTONES BORRAR Y RECORDAR
+    - Alto: 30px
+    - Ancho: 80px
+    - Sin bordes
+    - Borde redondeado 15px
+    - Letras blancas
+*/
+.btn-accion {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 12px; /* Ajuste visual para que quepa el texto */
+}
+
+/* Colores específicos */
+.btn-borrar {
+    background-color: red;
+}
+
+.btn-recordar {
+    background-color: blue;
+}
+
+/* Layout adicional para los checkboxes (usando div para ordenar como permitido) */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
+}
