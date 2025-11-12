@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Personas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2>Formulario de Registro</h2>
+        
+        <form id="miFormulario">
+            <input type="hidden" id="id_persona" name="id_persona" value="">
+
+            <div class="fila">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="fila">
+                <label>Apellidos:</label>
+                <input type="text" id="apellido" required>
+            </div>
+            <div class="fila">
+                <label>Región:</label>
+                <select id="region" required>
+                    <option value="">Seleccione...</option>
+                </select>
+            </div>
+            <div class="fila">
+                <label>Comuna:</label>
+                <select id="comuna" required disabled>
+                    <option value="">Seleccione Región primero</option>
+                </select>
+            </div>
+            <div class="fila">
+                <label>Profesión:</label>
+                <select id="profesion" required>
+                    <option value="">Seleccione...</option>
+                </select>
+            </div>
+
+            <div class="botones">
+                <button type="submit" id="btnGuardar">Enviar</button>
+                <button type="button" id="btnLimpiar" onclick="limpiarFormulario()">Limpiar</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <h3>Listado de Personas</h3>
+        <table id="tablaPersonas">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Región</th>
+                    <th>Comuna</th>
+                    <th>Profesión</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
