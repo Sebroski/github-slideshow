@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Desis</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Veterinaria de [Tu Nombre y Apellido]</h1>
+    <h2 style="text-align: center;">Veterinaria Desis</h2>
+
+    <table class="layout-table" align="center">
+        <tr>
+            <td valign="top">
+                <h3>Reserva tu hora</h3>
+                <form>
+                    <table class="form-table">
+                        <tr>
+                            <td>
+                                <label>Nombre y Apellido</label><br>
+                                <input type="text" name="nombre">
+                            </td>
+                            <td>
+                                <label>Nombre Mascota</label><br>
+                                <input type="text" name="mascota">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>RUT</label><br>
+                                <input type="text" name="rut">
+                            </td>
+                            <td>
+                                <label>Email</label><br>
+                                <input type="email" name="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Fecha de Consulta</label><br>
+                                <input type="date" name="fecha" value="2021-02-02">
+                            </td>
+                            <td>
+                                <label>Horario</label><br>
+                                <select name="horario">
+                                    <option>8:00 a 9:00</option>
+                                    <option>9:00 a 10:00</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Ciudad</label><br>
+                                <select name="ciudad">
+                                    <option>Santiago</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label>Comuna</label><br>
+                                <select name="comuna">
+                                    <option>San Miguel</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="checkbox-group">
+                                    <span style="margin-right: 10px;">Como se enteró de nosotros:</span>
+                                    <div style="display: inline-block; text-align: left;">
+                                        <input type="checkbox" id="web"> <label for="web">Web</label><br>
+                                        <input type="checkbox" id="tv"> <label for="tv">TV</label><br>
+                                        <input type="checkbox" id="amigos"> <label for="amigos">Amigos</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; padding-top: 10px;">
+                                <input type="checkbox" id="recordar"> 
+                                <label for="recordar">¿Le gustaría que le recordemos su hora, un día antes?</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; padding-top: 20px;">
+                                <button type="button" class="btn-reservar">Reservar</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+
+            <td valign="top" style="padding-left: 50px;">
+                <table class="data-table" border="1">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Horarios de Alta Demanda</th>
+                        </tr>
+                        <tr>
+                            <th>Horario</th>
+                            <th>Cantidad</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>14:00 a 15:00</td>
+                            <td>2</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>8:00 a 9:00</td>
+                            <td>1</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>16:00 a 17:00</td>
+                            <td>1</td>
+                            <td>25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <table class="data-table full-width" border="1" align="center">
+        <thead>
+            <tr>
+                <th colspan="5" style="background-color: #eee;">Listado de Reservadas</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Nombre Mascota</th>
+                <th>Recordar</th>
+                <th>Hora Agendada</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alejandro Ruiz</td>
+                <td>Cholito</td>
+                <td>Si</td>
+                <td>01/02/2021 8:00 a 9:00</td>
+                <td>
+                    <button class="btn-accion btn-borrar">Borrar</button>
+                    <button class="btn-accion btn-recordar">Recordar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Ana Morales</td>
+                <td>Blanca</td>
+                <td>No</td>
+                <td>10/02/2021 14:00 a 15:00</td>
+                <td>
+                    <button class="btn-accion btn-borrar">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Roberto Miler</td>
+                <td>Cokkie</td>
+                <td>No</td>
+                <td>18/02/2021 14:00 a 15:00</td>
+                <td>
+                    <button class="btn-accion btn-borrar">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Juan Gonzalez</td>
+                <td>Eren</td>
+                <td>Si</td>
+                <td>20/02/2021 16:00 a 17:00</td>
+                <td>
+                    <button class="btn-accion btn-borrar">Borrar</button>
+                    <button class="btn-accion btn-recordar">Recordar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
