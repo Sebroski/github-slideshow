@@ -1,0 +1,12 @@
+$sql = "SELECT 
+                p.id, 
+                p.nombre, 
+                p.apellidos, 
+                r.nombre as region,       -- Traemos nombre de region
+                c.nombre as comuna,       -- Traemos nombre de comuna
+                pr.nombre as profesion,   -- Traemos nombre de profesion (lo que ve el usuario)
+                pr.id as id_profesion     -- Traemos TAMBIÉN el ID (para el botón modificar)
+            FROM command.persona p
+            INNER JOIN ejercicio.profesion pr ON p.id_profesion = pr.id
+            LEFT JOIN ejercicio.region r ON p.id_region = r.id
+            LEFT JOIN ejercicio.comuna c ON p.id_comuna = c.id";
