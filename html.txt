@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Maratones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-header">Maratones</h1>
+
+    <div class="container">
+        <form action="#">
+            <table class="form-layout-table">
+                <tr>
+                    <td class="half-width">
+                        <label for="nombre">Nombre Carrera:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control">
+                    </td>
+                    <td class="half-width">
+                        <label for="tiempo">Tiempo Carrera:</label>
+                        <input type="text" id="tiempo" name="tiempo" class="form-control"> </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="atleta">Atleta:</label>
+                        <select id="atleta" name="atleta" class="form-control">
+                            <option value="">--Seleccione--</option>
+                            <option value="pedro">Pedro Cieza Leon</option>
+                            <option value="juan">Juan Perez</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="avance">Porcentaje de Avance:</label>
+                        <input type="text" id="avance" name="avance" class="form-control"> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" class="form-control textarea-control"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                        <button type="submit" class="btn-guardar">Guardar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <table class="results-grid">
+            <thead>
+                <tr>
+                    <th>Carrera</th>
+                    <th>Tiempo</th>
+                    <th>Atleta</th>
+                    <th>Comienzo</th>
+                    <th>Avance</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Catar 2025</td>
+                    <td>12</td>
+                    <td>Pedro Cieza Leon</td>
+                    <td>05-04-2024 12:26</td>
+                    <td>50%</td>
+                    <td class="action-cell">
+                        <button class="btn-editar">Editar</button>
+                        <button class="btn-eliminar">Eliminar</button>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+
+/* Estilos Generales Solicitados */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Header Azul Principal */
+.main-header {
+    background-color: #0056b3; /* Azul institucional */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DEL FORMULARIO (MAQUETADO CON TABLA) --- */
+.form-layout-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* La tabla del formulario no debe tener bordes visibles */
+}
+
+.form-layout-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.half-width {
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Inputs y Selects */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Para que el padding no rompa el ancho */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif; /* Heredar fuente */
+}
+
+.textarea-control {
+    height: 80px;
+    resize: vertical;
+}
+
+/* --- BOTONES SEGÚN ESPECIFICACIONES --- */
+
+/* Botón Guardar */
+.btn-guardar {
+    background-color: #0056b3;
+    color: white;
+    width: 320px;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    background-color: #004494;
+}
+
+/* Botón Editar */
+.btn-editar {
+    background-color: #0056b3;
+    color: white;
+    width: 116px;
+    height: 35px;
+    font-size: 13.5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+    background-color: #c82332;
+    color: white;
+    width: 116px;
+    height: 35px;
+    font-size: 13.5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- GRILLA/TABLA DE RESULTADOS --- */
+.results-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px; /* Ligeramente más pequeño para que quepa bien */
+}
+
+.results-grid thead tr {
+    background-color: #0056b3;
+    color: white;
+}
+
+.results-grid th, .results-grid td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.results-grid th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
+.results-grid tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.results-grid tr:hover {
+    background-color: #ddd;
+}
+
+.action-cell {
+    /* Para que los botones queden centrados y con espacio */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: none !important; /* Hack visual si se requiere celda limpia, sino quitar */
+}
+/* Ajuste para que la celda de acción se vea bien en modo tabla */
+.results-grid td.action-cell {
+    border: 1px solid #ddd !important;
+    display: table-cell; 
+}
