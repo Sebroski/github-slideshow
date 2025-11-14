@@ -1,0 +1,49 @@
+#historial {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra suave para que resalte */
+    }
+
+    /* Estilo de la CABECERA (TH) - Lo que pediste */
+    #historial thead tr {
+        background-color: #0056b3; /* El azul oscuro */
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #historial th, 
+    #historial td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    #historial tbody tr {
+        border-bottom: 1px solid #dddddd;
+        text-align: center; /* Centra todo el contenido */
+    }
+
+    /* Estilos de los Botones */
+    .btn-accion {
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-size: 14px;
+        transition: 0.3s; /* Suavizado al pasar el mouse */
+    }
+
+    .btn-editar {
+        background-color: #0056b3; /* Azul */
+        margin-right: 5px;
+    }
+
+    .btn-eliminar {
+        background-color: #dc3545; /* Rojo */
+    }
+
+    /* Efecto al pasar el mouse por los botones */
+    .btn-editar:hover { background-color: #004494; }
+    .btn-eliminar:hover { background-color: #c82333; }
